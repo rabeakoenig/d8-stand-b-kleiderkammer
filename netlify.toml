@@ -1,0 +1,10 @@
+# Was Netlify veröffentlicht: der Ordner app/ und die Funktion in netlify/functions/.
+# Die Seite ruft /api/frage auf, das leitet Netlify zur Funktion weiter. Kein Schlüssel hier.
+[build]
+  publish = "app"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/frage"
+  to = "/.netlify/functions/frage"
+  status = 200
